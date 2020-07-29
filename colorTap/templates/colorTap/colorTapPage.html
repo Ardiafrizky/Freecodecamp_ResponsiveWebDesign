@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Landing Page
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'colorTap/colorTap.css' %}">
+{% endblock %}
+
+{% block content %}
+    <header class="container-fluid">
+        <div class="container" id='theColor'>
+            <h1 id='key'>RGB(...)</h1>
+        </div>
+        <p>Now Guess the Color Mentioned</p>
+    </header>
+    <section class="container" id='btn-container'>
+        <button type="button" class="btn btn-warning" id='reset'>RESET</button>
+        <div class="container" id="difficulties">
+            <button type="button" class="btn btn-success">EASY</button>
+            <button type="button" class="btn btn-danger">HARD</button>
+        </div>
+    </section>
+    <section class="container" id='color-container'>
+        <button class="color-box btn" id='box-1'></button>
+        <button class="color-box btn" id='box-2'></button>
+        <button class="color-box btn" id='box-3'></button>
+        <button class="color-box btn" id='box-4'></button>
+        <button class="color-box btn" id='box-5'></button>
+        <button class="color-box btn" id='box-6'></button>
+        <button class="color-box btn" id='box-7'></button>
+        <button class="color-box btn" id='box-8'></button>
+        <button class="color-box btn" id='box-9'></button>
+    </section>
+    <script src="{% static 'colorTap/colorTap.js' %}"></script>
+{% endblock %}

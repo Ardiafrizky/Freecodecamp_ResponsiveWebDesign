@@ -1,0 +1,164 @@
+:root {
+    font-size: 16px;
+    font-family: 'Lora', serif;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #f1f361;
+}
+
+main {
+    padding: 0;
+    margin: 0;
+}
+
+.navi {
+    position: fixed;
+    background-color: rgb(36, 36, 36);
+    z-index: 1;
+    transition: width 0.25s ease;
+}
+
+.logo .fa {
+    color: rgb(255, 255, 73);
+}
+
+.navi:hover .logo .fa {
+    transform: rotate(180deg);
+    filter: grayscale(0%) opacity(1);
+    color: orange;
+    transition-duration: 0.2s;
+}
+
+.navi-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.logo {
+    width: 100%;
+    text-align: center;
+    height: 5rem;
+    background-color: rgb(22, 22, 22);
+}
+
+.logo > div {
+    display: flex;
+    height: 5rem;
+    align-content: center;
+}
+
+.logo span {
+    margin: auto;
+    margin-left: 0;
+    font-size: 1.3rem;
+}
+
+.navi-link {
+    width: 100%;
+    text-align: center;
+    height: 5rem;
+}
+
+.navi-link > a {
+    height: 5rem;
+    display: flex;
+    align-content: center;
+}
+
+.navi-link:last-child {
+    margin-top: auto;
+}
+
+span {
+    text-decoration: none;
+    color: white;
+    display: none;
+    margin: auto;
+    margin-right: 4rem;
+}
+
+a:hover {
+    background-color: rgb(27, 27, 27);
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition-duration: 0.2s;
+}
+
+a:hover .fa {
+    filter: grayscale(0%) opacity(1);
+}
+
+.fa {
+    height: fit-content;
+    margin:auto;
+    color: rgb(252, 255, 79);
+    font-size: 1.6rem;
+    transition-duration: 0.5s;
+}
+
+a .fa {
+    filter: grayscale(100%) opacity(0.6);
+}
+
+/* big screen */
+@media only screen and (min-width:600px){
+    main {
+        margin-left: 5rem;
+    }
+    .navi {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+    .navi:hover {
+        width: 14rem;
+    }
+    .navi:hover span {
+        display: inline;
+    }
+    .navi-links {
+        flex-direction: column;
+        height: 100vh;
+    }
+}
+
+/* small screen */
+@media (max-width:600px) {
+    footer {
+        margin-bottom: 5rem;
+    }
+    .logo {
+        display: none;
+    }
+    .navi {
+        bottom: 0;
+        height: 5rem;
+        width: 100vw;
+        flex-direction: row;
+    }
+    .navi-links {
+        flex-direction: row;
+    }
+}
